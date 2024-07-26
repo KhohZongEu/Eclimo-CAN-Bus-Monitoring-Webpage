@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Canbus Monitoring System</title>
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>    
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span> Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pages/hydrogen.html">
+                            <i class="fa-solid fa-bong"></i>
+                            <span> Hydrogen</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pages/fuel-cell.html">
+                            <i class="fa-solid fa-plug"></i>
+                            <span> Fuel Cell</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pages/ultra-cap.html">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span> Ultra capacitor</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pages/battery.html">
+                            <i class="fa-solid fa-car-battery"></i>
+                            <span> Battery</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <header>Overview</header>
+        
+        <div class="data-chain">
+
+            <a class="data-box" href="./pages/hydrogen.html">
+                <h2>Hydrogen</h2>
+                <div class="data">
+                    <h3><i class="fa-solid fa-temperature-half"></i> Temperature </h3>
+                    <p class="values" id="hydrogen-temp"></p>
+                    
+                    <h3><i class="fa-solid fa-bolt-lightning"></i> Voltage </h3>
+                    <p class="values" id="hydrogen-volt"></p>
+
+                    <h3><i class="fa-solid fa-wind"></i> Current </h3>
+                    <p class="values" id="hydrogen-amp"></p>
+
+                </div>
+            </a>
+            
+            <a class="data-box" href="./pages/fuel-cell.html">
+                <h2>Fuel Cell</h2>
+                <div class="data">
+                    <h3><i class="fa-solid fa-temperature-half"></i> Temperature </h3>
+                    <p class="values" id="fuel-cell-temp"></p>
+                    
+                    <h3><i class="fa-solid fa-bolt-lightning"></i> Voltage </h3>
+                    <p class="values" id="fuel-cell-volt"></p>
+                    
+                    <h3><i class="fa-solid fa-wind"></i> Current </h3>
+                    <p class="values" id="fuel-cell-amp"></p>
+                    
+                </div>
+            </a>
+            
+            <a class="data-box" href="./pages/ultra-cap.html">
+                <h2>Ultra Capacitor</h2>
+                <div class="data">
+                    <h3><i class="fa-solid fa-temperature-half"></i> Temperature </h3>
+                    <p class="values" id="ultra-cap-temp"></p>
+
+                    <h3><i class="fa-solid fa-bolt-lightning"></i> Voltage </h3>
+                    <p class="values" id="ultra-cap-volt"></p>
+                    
+                    <h3><i class="fa-solid fa-wind"></i> Current </h3>
+                    <p class="values" id="ultra-cap-amp"></p>
+                    
+                </div>
+            </a>
+            
+            <a class="data-box" href="./pages/battery.html">
+                <h2>Battery</h2>
+                <div class="data">
+                    <h3><i class="fa-solid fa-temperature-half"></i> Temperature </h3>
+                    <p class="values" id="battery-temp"></p>
+                    
+                    <h3><i class="fa-solid fa-bolt-lightning"></i> Voltage </h3>
+                    <p class="values" id="battery-volt"></p>
+
+                    <h3><i class="fa-solid fa-wind"></i> Current </h3>
+                    <p class="values" id="battery-amp"></p>
+
+                </div>
+            </a>
+        </div>
+    </div>
+        
+        <script type="module" src="js/main.js"></script>
+    </body>
+    
+    </html>
+    
