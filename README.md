@@ -24,6 +24,7 @@ Database details for Google Firebase are safe to be included in code as stated b
 > ```
 
 ### Database Structure
+Current Firebae database storage structure
 ```
 |--CANBUS
 |
@@ -48,6 +49,7 @@ Database details for Google Firebase are safe to be included in code as stated b
 |  |  |  |-- 1: 3
 |  |  |  |-- 2: 2
 |  |  |  |-- 3: 1.5
+|  |  |  |-- ...
 |  |  |--temp: 26
 |  |  |--amp: 12
 ```
