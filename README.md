@@ -7,17 +7,19 @@
 ## Firebase RTDB integration
 ### Database Details
 Database details are stores in a `.env` file in the root directory<br>
-> [!NOTE]
-> `.env` file contents: 
+> [!IMPORTANT]
+> Database details are to be changed.
 > ```
-> APIKEY = your-api-key
-> AUTHDOMAIN = your-auth-domain
-> DATABASEURL = your-database-url
-> PROJECTID = your-project-id
-> STORAGEBUCKET = your-storage-bucket
-> MESSAGINGSENDERID = your-message-senders-id
-> APPID = your-app-id
-> MEASUREMENTID = your-measurement-id
+>const firebaseConfig = {
+>    apiKey: "YOUR_API_KEY",
+>    authDomain: "YOUR_AUTH_DOMAIN",
+>    databaseURL: "YOUR_DB_URL",
+>    projectId: "YOUR_PROJECT_ID",
+>    storageBucket: "YOUR_STORAGE_BUCKET",
+>    messagingSenderId: "YOUR_MESSAGE_Sender_ID",
+>    appId: "YOUR_APP_ID",
+>    measurementId: "YOUR_MEASUREMENT_ID",
+>  };
 > ```
 
 ## Color changing grid function usage
