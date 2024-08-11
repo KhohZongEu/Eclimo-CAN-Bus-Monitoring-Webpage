@@ -2,6 +2,7 @@
 
 ## Currently implemented functions
 - Colour Changing grid based on cell color
+    - Base cell colour is `#00BFF3`
 - Data retrieval from firebase database
 
 ## Firebase RTDB integration
