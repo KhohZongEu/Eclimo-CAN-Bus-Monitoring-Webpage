@@ -6,9 +6,10 @@
 
 ## Firebase RTDB integration
 ### Database Details
-Database details are stores in a `.env` file in the root directory<br>
+Database details for Google Firebase are safe to be included as stated by [Google Engineers](https://medium.com/@paulbreslin/is-it-safe-to-expose-your-firebase-api-key-to-the-public-7e5bd01e637b#:~:text=In%20a%20word%2C%20yes.,security%20risk%20to%20expose%20it.)
 > [!IMPORTANT]
-> Database details are to be changed.
+> Database details are to be changed.<br>
+> Database Read & Write Rules should also be changed according to usage
 > ```
 >const firebaseConfig = {
 >    apiKey: "YOUR_API_KEY",
