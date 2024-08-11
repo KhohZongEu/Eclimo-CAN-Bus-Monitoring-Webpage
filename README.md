@@ -6,7 +6,7 @@
 
 ## Firebase RTDB integration
 ### Database Details
-Database details for Google Firebase are safe to be included as stated by [Google Engineers](https://medium.com/@paulbreslin/is-it-safe-to-expose-your-firebase-api-key-to-the-public-7e5bd01e637b#:~:text=In%20a%20word%2C%20yes.,security%20risk%20to%20expose%20it.)
+Database details for Google Firebase are safe to be included in code as stated by [Google Engineers](https://medium.com/@paulbreslin/is-it-safe-to-expose-your-firebase-api-key-to-the-public-7e5bd01e637b#:~:text=In%20a%20word%2C%20yes.,security%20risk%20to%20expose%20it.)
 > [!IMPORTANT]
 > Database details are to be changed.<br>
 > Database Read & Write Rules should also be changed according to usage
@@ -22,6 +22,40 @@ Database details for Google Firebase are safe to be included as stated by [Googl
 >    measurementId: "YOUR_MEASUREMENT_ID",
 >  };
 > ```
+
+### Database Structure
+```
+|--CANBUS
+|
+|  |--battery
+|  |  |--volt: 24
+|  |  |--temp: 30
+|  |  |--amp: 3
+|  |
+|  |--fuel_cell
+|  |  |--volt: 12
+|  |  |--temp: 15
+|  |  |--amp: 23
+|  |  
+|  |--hydrogen
+|  |  |--volt: 32
+|  |  |--temp: 28
+|  |  |--amp: 6
+|  |  
+|  |--ultra-cap
+|  |  |--volt
+|  |  |  |-- 0: 2
+|  |  |  |-- 1: 3
+|  |  |  |-- 2: 2
+|  |  |  |-- 3: 1.5
+|  |  |--temp: 26
+|  |  |--amp: 12
+```
+
+### Code structure
+Database config is run in `js/main.js` <br>
+Subsequent pages contain their own `.js` file in `js/pages` which runs independently
+
 
 ## Color changing grid function usage
 1. Inside `./js/pages/ultra-cap.js` you will be able to tweek the rendering and data of the page
