@@ -49,7 +49,6 @@ ul {
 .navbar .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .navbar .menu {
@@ -83,6 +82,7 @@ ul {
 
 .main {
     padding: 15px 20px;
+    align-items: center;
 }
 
 .main header {
@@ -98,7 +98,7 @@ ul {
 
 .main .data-box {
     color: black;
-    border: 2px solid #0477e2;
+    border: 2px solid var(--secondary-background);
     border-radius: 12px;
     margin: 15px auto;
     padding: 10px 20px;
@@ -153,7 +153,7 @@ ul {
     margin: 3px;
     width: 20px;
     height: 20px;
-    background-color: #00BFF3;
+    background-color: var(--primary-text);
     list-style-type: none;
 }
 
