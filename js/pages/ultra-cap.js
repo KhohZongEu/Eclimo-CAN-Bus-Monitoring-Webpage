@@ -42,6 +42,10 @@ onValue(ref(database,'CANBUS/ultra_cap'), (snapshot) => {
       avr_ultra_cap_volt += tmp[i];
       let cellName = 'cell' + (i + 1);
       changeColor(cellName, tmp[i]);
+
+      let content = document.createElement("span");
+      content.textContent = tmp[i].toFixed(1) + 'V';
+      document.getElementById(cellName).appendChild(content);
     }
 
     avr_ultra_cap_volt /= tmp.length;
