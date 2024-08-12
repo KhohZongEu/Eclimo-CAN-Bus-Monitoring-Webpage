@@ -164,7 +164,8 @@ ul {
 
 .cell:hover {
     cursor: pointer;
-    transition: background-color 0.5 ease;
+    transition-duration: 0.15s;
+    transition-property: all;
     width: 30px;
     height: 30px;
 }
