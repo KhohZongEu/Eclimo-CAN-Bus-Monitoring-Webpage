@@ -10,6 +10,7 @@ const greenColorLow = 0;
 const greenColorHigh = 255;
 
 
+
 function changeColor(id, Voltage) {
     let greenVal = greenColorLow + (greenColorHigh - greenColorLow) * (Voltage - lowVolt) / (highVolt - lowVolt);
     let redVal = redColorLow + (redColorHigh - redColorLow) * (Voltage - lowVolt) / (highVolt - lowVolt);;
@@ -31,6 +32,11 @@ function createGrid() {
 
 createGrid();
 
+function analogConversion(val){
+    let Volt = 0 + (3 - 0) * (val - 0) / (255 - 0);
+    return Volt;
+}
+
 onValue(ref(database,'CANBUS/ultra_cap'), (snapshot) => {
     let ultra_cap_temp = snapshot.val().temp;
     let avr_ultra_cap_volt = 0;
@@ -39,19 +45,19 @@ onValue(ref(database,'CANBUS/ultra_cap'), (snapshot) => {
 
 
     for (let i = 0; i < tmp.length; i++) {
-      avr_ultra_cap_volt += tmp[i];
+      avr_ultra_cap_volt += analogConversion(tmp[i]);
       let cellName = 'cell' + (i + 1);
       changeColor(cellName, tmp[i]);
 
       let content = document.createElement("span");
-      content.textContent = tmp[i].toFixed(1) + 'V';
+      content.textContent = analogConversion(tmp[i]).toFixed(1) + 'V';
       document.getElementById(cellName).appendChild(content);
     }
 
     avr_ultra_cap_volt /= tmp.length;
 
     document.getElementById("avr-ultra-cap-temp").innerHTML = ultra_cap_temp + ' °C';
-    document.getElementById("avr-ultra-cap-volt").innerHTML = avr_ultra_cap_volt + ' V';
+    document.getElementById("avr-ultra-cap-volt").innerHTML = avr_ultra_cap_volt.toFixed(1) + ' V';
     document.getElementById("avr-ultra-cap-amp").innerHTML = ultra_cap_amp + ' A';
 
   });  
