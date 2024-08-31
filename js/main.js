@@ -24,14 +24,14 @@ function analogConversion(val){
 }
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  databaseURL: "YOUR_DB_URL",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGE_Sender_ID",
-  appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_ID",
+  apiKey: "AIzaSyAHmdwFtSJ7YgBuNHSVdR9mTFHPBYi3Ta4",
+  authDomain: "habit-chair.firebaseapp.com",
+  databaseURL: "https://habit-chair-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "habit-chair",
+  storageBucket: "habit-chair.appspot.com",
+  messagingSenderId: "49817452985",
+  appId: "1:49817452985:web:74ee05a89d9e22c3bd3668",
+  measurementId: "G-XKVYRZ7BPJ"
 };
 
 const app = initializeApp(firebaseConfig);
